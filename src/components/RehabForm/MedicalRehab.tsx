@@ -8,7 +8,7 @@ export function MedicalRehab({ formData, setFormData }: any) {
   return (
     <Card className="form-card">
       <CardHeader className="p-4">
-        <CardTitle className="text-xl font-semibold">2. Медицинская реабилитация</CardTitle>
+        <CardTitle className="text-2xl font-semibold">2. Медицинская реабилитация</CardTitle>
       </CardHeader>
       <CardContent className="p-4 space-y-4">
         <div className="form-section">
