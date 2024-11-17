@@ -5,9 +5,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export function PersonalInfo({ formData, setFormData }: any) {
   return (
-    <Card className="form-card">
+    <Card className="form-card p-2">
       <CardHeader className="p-4">
-        <CardTitle className="text-2xl font-semibold">1. Личная информация</CardTitle>
+        <CardTitle className="text-2xl font-semibold">Личная информация</CardTitle>
       </CardHeader>
       <CardContent className="p-4 space-y-4">
         <div className="form-section">

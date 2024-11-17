@@ -8,7 +8,7 @@ export function PhysicalRehab({ formData, setFormData }: any) {
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">3. Физическая реабилитация</CardTitle>
+        <CardTitle className="text-2xl font-bold">Физическая реабилитация</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-6">
         <div className="space-y-2">

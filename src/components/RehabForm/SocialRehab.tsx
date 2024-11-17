@@ -8,7 +8,7 @@ export function SocialRehab({ formData, setFormData }: any) {
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">5. Социальная реабилитация</CardTitle>
+        <CardTitle className="text-2xl font-bold">Социальная реабилитация</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-6">
         <div className="space-y-2">

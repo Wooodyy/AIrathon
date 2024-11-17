@@ -8,7 +8,7 @@ export function PsychologicalRehab({ formData, setFormData }: any) {
   return (
     <Card className="mb-6">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">4. Психологическая реабилитация</CardTitle>
+        <CardTitle className="text-2xl font-bold">Психологическая реабилитация</CardTitle>
       </CardHeader>
       <CardContent className="grid gap-6">
         <div className="space-y-2">
