@@ -22,7 +22,7 @@ export function JobCard({ title, company, salary, location, url }: JobCardProps)
             <p className="text-sm font-medium">Зарплата</p>
             <p className="text-muted-foreground">{salary}</p>
           </div>
-          <div className="space-y-1">
+          <div className="space-y-1 grid justify-items-end">
             <p className="text-sm font-medium">Локация</p>
             <p className="text-muted-foreground">{location}</p>
           </div>

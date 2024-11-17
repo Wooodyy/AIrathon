@@ -7,6 +7,7 @@ import { PhysicalRehab } from './RehabForm/PhysicalRehab';
 import { PsychologicalRehab } from './RehabForm/PsychologicalRehab';
 import { SocialRehab } from './RehabForm/SocialRehab';
 import { ProfessionalRehab } from './RehabForm/ProfessionalRehab';
+import { formatRehabData } from '../utils/formatRehabData';
 import { 
   ActivitySquare, 
   User, 
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 import { ModeToggle } from "./mode-toggle";
 import { cn } from "../lib/utils";
+
 
 export function RehabForm() {
   const navigate = useNavigate();
@@ -62,10 +64,34 @@ export function RehabForm() {
     { id: 'professional', icon: Briefcase, label: 'Профессиональная реабилитация', component: ProfessionalRehab }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    navigate('/home');
+    
+    const formattedData = formatRehabData(formData);
+    
+    try {
+      const response = await fetch('https://cosmo1564.app.n8n.cloud/webhook-test/c49c2c83-fb6e-491a-91cf-a21eb6dbd16e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formattedData)
+        
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Success:', data);
+      navigate('/home');
+    } catch (error) {
+      console.error('Error:', error);
+      //console.log(JSON.stringify(formattedData));
+      //navigate('/home');
+      // Here you might want to show an error message to the user
+    }
   };
 
   const handleTabClick = (tabId: string, e: React.MouseEvent) => {
