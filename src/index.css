@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +26,9 @@
     --input: 0 0% 89.8%;
     --ring: 266 81% 71%;
     --radius: 0.75rem;
+    --shadow-color: 220 3% 15%;
+    --shadow-strength: 1%;
+    --font-montserrat: 'Montserrat', sans-serif;
   }
 
   .dark {
@@ -46,16 +51,34 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 266 81% 71%;
+    --shadow-color: 220 40% 2%;
+    --shadow-strength: 25%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border font-montserrat;
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased font-montserrat;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1 {
+    @apply font-montserrat font-bold text-2xl;
+  }
+  
+  h2 {
+    @apply font-montserrat font-semibold text-xl;
+  }
+  
+  h3 {
+    @apply font-montserrat font-medium text-lg;
+  }
+  
+  p {
+    @apply font-montserrat font-normal;
   }
   
   input[type="number"] {
@@ -76,12 +99,16 @@
 }
 
 .card {
-  @apply transition-all duration-300 hover:shadow-lg;
+  @apply transition-all duration-300;
+}
+
+.card:hover {
+  @apply shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.7)];
 }
 
 /* Custom styles for unified spacing */
 .form-card {
-  @apply bg-card rounded-lg border shadow-sm;
+  @apply bg-card rounded-lg border shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.4),0_10px_20px_-2px_rgba(0,0,0,0.3)];
 }
 
 .form-section {
