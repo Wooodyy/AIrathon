@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { JobCard } from '../components/JobCard';
 
 const mockJobs = [
@@ -30,16 +30,16 @@ const mockJobs = [
 
 export function Jobs() {
   return (
-    <div className="min-h-screen p-4 sm:p-6">
-      <div className="max-w-2xl mx-auto">
-        <div className="mb-6">
-          <h1 className="text-2xl font-bold mb-2">Вакансии</h1>
-          <p className="text-muted-foreground">
-            Доступные вакансии для соискателей с разным опытом работы
+    <div className="min-h-screen px-4 py-6">
+      <div className="max-w-5xl mx-100% space-y-8 ">
+        <div className="space-y-2">
+          <h1 className="text-3xl font-bold">Вакансии</h1>
+          <p className="text-lg text-muted-foreground">
+            Доступные вакансии для вас с вашими навыками и опытом работы
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="grid gap-4">
           {mockJobs.map(job => (
             <JobCard
               key={job.id}

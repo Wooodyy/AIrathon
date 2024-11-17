@@ -38,19 +38,19 @@ const mockProfileData = {
     activityTime: '45 минут в день'
   },
   psychological: {
-    state: 4,
+    state: 5,
     conditions: ['Периодическая тревожность'],
     notes: 'Позитивный настрой на реабилитацию'
   },
   social: {
-    state: 5,
+    state: 4,
     communicationIssues: false,
     eventsParticipation: true,
     needs: 'Расширение социальных контактов'
   },
   professional: {
     state: 4,
-    skills: 'Графический дизайн, UI/UX проектирование',
+    skills: 'Графический дизайн, UI/UX проектирование', 
     experience: '5 лет в сфере дизайна'
   }
 };

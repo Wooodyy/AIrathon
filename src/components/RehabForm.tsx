@@ -158,7 +158,7 @@ export function RehabForm() {
             size="lg"
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
           >
-            Отправить форму
+            Сгенерировать
           </Button>
         </form>
       </div>

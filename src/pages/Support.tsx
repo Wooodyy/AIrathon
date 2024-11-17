@@ -47,7 +47,7 @@ export function Support() {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-12rem)]">
+    <div className="flex flex-col h-[calc(100vh-12rem)]" >
       <div className="flex-none px-4 py-3 border-b">
         <h1 className="text-xl font-semibold">Чат поддержки</h1>
       </div>

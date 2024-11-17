@@ -1,5 +1,4 @@
 import React from 'react';
-import { MapPin, Building2, Banknote } from 'lucide-react';
 
 interface JobCardProps {
   title: string;
@@ -11,34 +10,33 @@ interface JobCardProps {
 
 export function JobCard({ title, company, salary, location, url }: JobCardProps) {
   return (
-    <div className="border rounded-lg p-4 hover:shadow-md transition-shadow bg-card">
-      <h3 className="text-lg font-semibold mb-3">{title}</h3>
-      
-      <div className="space-y-2 mb-4">
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Building2 className="w-4 h-4" />
-          <span>{company}</span>
+    <div className="w-full border border-border/50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+      <div className="flex flex-col gap-4">
+        <div className="space-y-1">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          <p className="text-muted-foreground">{company}</p>
         </div>
         
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Banknote className="w-4 h-4" />
-          <span>{salary}</span>
+        <div className="flex flex-col sm:flex-row justify-between gap-4">
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Зарплата</p>
+            <p className="text-muted-foreground">{salary}</p>
+          </div>
+          <div className="space-y-1">
+            <p className="text-sm font-medium">Локация</p>
+            <p className="text-muted-foreground">{location}</p>
+          </div>
         </div>
-        
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <MapPin className="w-4 h-4" />
-          <span>{location}</span>
-        </div>
+
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-primary text-primary-foreground py-2.5 px-4 rounded-lg text-center font-medium hover:bg-primary/90 transition-colors"
+        >
+          Подробнее
+        </a>
       </div>
-      
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block px-4 py-2 bg-primary/90 text-primary-foreground rounded-lg hover:bg-primary/80 transition-colors text-sm"
-      >
-        Подробнее
-      </a>
     </div>
   );
 }

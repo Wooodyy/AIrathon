@@ -1,4 +1,3 @@
-import React from 'react';
 import { ActivitySquare } from 'lucide-react';
 
 export function Home() {
