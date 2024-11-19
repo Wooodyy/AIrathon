@@ -89,7 +89,7 @@ export function RehabForm() {
     } catch (error) {
       console.error('Error:', error);
       //console.log(JSON.stringify(formattedData));
-      //navigate('/home');
+      navigate('/home');
       // Here you might want to show an error message to the user
     }
   };
